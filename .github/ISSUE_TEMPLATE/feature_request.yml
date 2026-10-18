@@ -1,0 +1,30 @@
+name: 'Sugerencia de funcionalidad (Feature Request)'
+description: 'Propón una idea o mejora para Unistall'
+title: '[FEAT]: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¿Tienes una idea para hacer Unistall aún mejor? ¡Nos encantaría escucharla!
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Qué problema resuelve esta sugerencia?
+      description: Una descripción clara de qué limitación encuentras actualmente.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solución propuesta
+      description: Explica cómo te gustaría que funcione la nueva característica.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: ¿Has considerado alguna otra alternativa o software similar?
+    validations:
+      required: false

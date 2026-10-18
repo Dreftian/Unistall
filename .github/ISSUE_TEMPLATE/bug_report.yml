@@ -1,0 +1,48 @@
+name: 'Reportar un error (Bug Report)'
+description: 'Crea un informe para ayudarnos a corregir fallos o errores en Unistall'
+title: '[BUG]: '
+labels: ['bug', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por tomarte el tiempo de reportar este problema! Completa la siguiente información.
+  - type: input
+    id: version
+    attributes:
+      label: Versión de Unistall
+      placeholder: 'Ejemplo: v1.0.0'
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Edición y Versión de Windows
+      placeholder: 'Ejemplo: Windows 11 Pro 23H2 (Build 22631)'
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del problema
+      description: Explica qué ocurrió de forma concisa.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      description: Indica los pasos detallados para replicar el fallo.
+      placeholder: |
+        1. Iniciar la aplicación
+        2. Seleccionar la pestaña ...
+        3. Hacer clic en ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+      description: Qué debería haber ocurrido en su lugar.
+    validations:
+      required: false

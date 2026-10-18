@@ -1,0 +1,44 @@
+[package]
+name = "unistall"
+version = "1.0.0"
+description = "Professional, ultra-fast Windows software manager & deep leftover cleaner"
+authors = ["Unistall Development Team"]
+edition = "2021"
+
+[lib]
+name = "unistall_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = [] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rayon = "1.10"
+base64 = "0.22"
+walkdir = "2.5"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[dependencies.windows]
+version = "0.58"
+features = [
+    "Win32_Foundation",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_System_RestartManager",
+    "Win32_System_Services",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Shell",
+    "Win32_Graphics_Gdi",
+]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

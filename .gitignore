@@ -1,0 +1,27 @@
+# Rust
+target/
+src-tauri/target/
+**/*.rs.bk
+Cargo.lock
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+
+# NSIS
+Install/*.exe
+Install/*.tmp
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS / Logs / Temp
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+*.tmp
